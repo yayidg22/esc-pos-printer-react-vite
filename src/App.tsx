@@ -55,7 +55,8 @@ function App() {
         <h1>IMPRIMIENDO</h1>
       ) : (
         <Fragment>
-          <h1>generic-printer-manager-ts v1.0.2 BETA</h1>
+          <h1>escpos-printer-example</h1>
+          <h4>ESC/POS Printer-manager v1.0.0 BETA</h4>
           <div className="card">
             <label htmlFor="printerNameInput">Printer: </label>
             <select
