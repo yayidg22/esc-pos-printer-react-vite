@@ -9,20 +9,28 @@ function App() {
   const [loading, setLoading] = useState<boolean>(false);
 
   const handleInvoicePrintClick = async () => {
-    setLoading(true);
-    await handleInvoicePrintExample(sharedPrinterName);
-    setLoading(false);
+    try {
+      setLoading(true);
+      await handleInvoicePrintExample(sharedPrinterName);
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+    }
   };
 
   const handlePrint = async () => {
-    setLoading(true);
-    const printer = new Printer(sharedPrinterName);
-    printer.text("IT WORKS!!! :D\n");
-    printer.feed(2);
-    printer.cut();
-    printer.close();
-    await printer.print();
-    setLoading(false);
+    try {
+      setLoading(true);
+      const printer = new Printer(sharedPrinterName);
+      printer.text("IT WORKS!!! :D\n");
+      printer.feed(2);
+      printer.cut();
+      printer.close();
+      await printer.print();
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+    }
   };
 
   const getPrintersList = async () => {
