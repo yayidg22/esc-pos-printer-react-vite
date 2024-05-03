@@ -16,6 +16,7 @@ This project is an example of using the [esc-pos-printer](https://www.npmjs.com/
 
 - Node.js (20.9.0) and npm or yarn installed on your machine.
 - An ESC/POS-compatible thermal printer connected to your system `WITH SHARED OPTION AND NAME CONFIGURED`.
+- Running [ESC-POS Printer Manager](https://escpos-printermanager.netlify.app/)
 
 ### Installation
 
