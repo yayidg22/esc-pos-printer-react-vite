@@ -899,10 +899,10 @@ esbuild@^0.20.1:
     "@esbuild/win32-ia32" "0.20.2"
     "@esbuild/win32-x64" "0.20.2"
 
-esc-pos-printer@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/esc-pos-printer/-/esc-pos-printer-1.0.0.tgz#1d02fa78adbde8778a9aa8953d3ceb1347197882"
-  integrity sha512-wsAwlMVUijKbpycmipaLvn/0kTjbB2mn12HhmH5cY2lQcwzM6pFoKS3puKtRMC8z0oMboy6Whl0f0i3Fqll7sw==
+esc-pos-printer@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/esc-pos-printer/-/esc-pos-printer-1.0.5.tgz#2fd4557c35b2fe24f1f14d96edfd1e3aedb72b4a"
+  integrity sha512-mhUSCkSEHRvb3dx593HmjiudTNS7cCH/A7PZBflDXAgFm/CqvPhq69DZssBLQdmCX+PkvSlEhUfp0dT6PujxHA==
 
 escalade@^3.1.2:
   version "3.1.2"

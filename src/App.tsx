@@ -18,6 +18,7 @@ function App() {
     }
   };
 
+  /* Simple test */
   const handlePrint = async () => {
     try {
       setLoading(true);
@@ -32,6 +33,44 @@ function App() {
       setLoading(false);
     }
   };
+
+  /* Simple test */
+  const handlePrintUnifont = async () => {
+    try {
+      setLoading(true);
+      const printer = new Printer(sharedPrinterName, { textSpecial: true, });
+      printer.text("IT WORKS!!! :D\n");
+      printer.text("Hola esto funciona\n");
+      printer.text("Ողջույն, սա աշխատում է: \n");
+      printer.text("こんにちは、これは機能します \n");
+      printer.text("안녕하세요 이게 작동해요 \n");
+      printer.text("你好，这有效 \n");
+      printer.feed(2);
+      printer.cut();
+      printer.close();
+      await printer.print();
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+    }
+  };
+
+    /* Simple test */
+    const handlePrintAsian = async () => {
+      try {
+        setLoading(true);
+        const printer = new Printer(sharedPrinterName, { textAsian: true });
+        printer.text("こんにちは、これは機能します \n");
+        printer.text("你好，这有效 \n");
+        printer.feed(2);
+        printer.cut();
+        printer.close();
+        await printer.print();
+        setLoading(false);
+      } catch (error) {
+        setLoading(false);
+      }
+    };
 
   const getPrintersList = async () => {
     try {
@@ -64,7 +103,6 @@ function App() {
       ) : (
         <Fragment>
           <h1>escpos-printer-example</h1>
-          <h4>ESC/POS Printer-manager v1.0.0 BETA</h4>
           <div className="card">
             <label htmlFor="printerNameInput">Printer: </label>
             <select
@@ -78,6 +116,10 @@ function App() {
 
             <div className="buttons-container">
               <button onClick={() => handlePrint()}>TEST PRINT</button>
+              <br />
+              <button onClick={() => handlePrintUnifont()}>TEST UNIFONT PRINT</button>
+              <br />
+              <button onClick={() => handlePrintAsian()}>TEST ASIAN TEXT PRINT</button>
               <br />
               <button onClick={() => handleInvoicePrintClick()}>
                 INVOICE PRINT
